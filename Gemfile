@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'redis'
-gem 'splitclient-rb'
+gem 'splitclient-rb', '5.1.0'
 gem 'dotenv-rails'
 gem 'actionpack-action_caching'
 

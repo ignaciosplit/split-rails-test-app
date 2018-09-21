@@ -11,10 +11,11 @@ options = {
   metrics_refresh_rate: 60,
   impressions_refresh_rate: 10,
   debug_enabled: true,
-  transport_debug_enabled: false,
+  transport_debug_enabled: true,
   cache_adapter: ENV.fetch('CACHE_ADAPTER', :memory).to_sym,
   mode: ENV.fetch('MODE', :standalone).to_sym,
-  impression_listener: test_impressions_listener
+  impression_listener: test_impressions_listener,
+  logger: Logger.new($stdout)
 }
 
 factory = SplitIoClient::SplitFactoryBuilder.build(ENV['API_KEY'], options)
